@@ -6,6 +6,8 @@ port = 1883
 print 'Topic Name?: '
 topic = gets.chomp
 
+abort if topic.empty?
+
 MQTT::Client.connect(
   :remote_host => host,
   :remote_port => port,
